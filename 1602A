@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{ int t;
+cin>>t;
+while(t--)
+{
+    
+   int i,j;
+   string s;
+   cin>>s;
+   char min=s[0];
+   int r=0;
+   int n=s.length();
+   for(i=0;i<n;i++)
+   {
+       if(s[i]<min)
+       {
+           min=s[i];
+           r=i;
+       }
+   }
+       string se;
+       if(r==n-1)
+       se=s.substr(0,r);
+       else
+       se=s.substr(0,r)+s.substr(r+1);
+       
+       cout<<min<<" "<<se<<endl;
+   
+}
+}
