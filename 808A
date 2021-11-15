@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    int n;
+    cin>>n;
+    int a;
+    a=n;
+    int c=0;
+    while(a>0)
+    {
+           c++;
+        a=a/10;
+       
+    }
+   int r=n/pow(10,c-1);
+   int x=(r+1)*pow(10,c-1);
+   
+   if(c==1)
+   cout<<1<<endl;
+   else{
+  // cout<<x<<" ";
+   cout<<x-n;
+   }
+    return 0;
+}
