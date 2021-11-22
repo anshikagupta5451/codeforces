@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    string a,b;
+	    cin>>a>>b;
+	    bool ye;
+	    int an=0;
+	    ye=b[n-1]>a[n-1];
+	    if(ye)
+	    {
+	        an++;
+	    }
+	    for(int i=n-2;i>=0;i--)
+	    {
+	        if(b[i]>a[i])
+	        {
+	            ye=true;
+	            an++;
+	        }
+	        else if(b[i]<a[i])
+	        {
+	            ye=false;
+	            
+	        }
+	        else
+	        {
+	            if(ye)
+	            {
+	                an++;
+	            }
+	        }
+	    }
+	    cout<<an<<endl;
+	}
+	return 0;
+}
